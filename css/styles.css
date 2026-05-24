@@ -50,7 +50,6 @@ h1 {
     padding: 10px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
 }
 
 button {
@@ -64,11 +63,9 @@ button {
     gap: 20px;
 }
 
-/* h3:hover {
-    color: var(--active-btn-color);
-
-    todo on js 
-} */
+h3:hover {
+    color: purple;
+}
 
 h3 {
     color: var(--deactive-btn-color);
@@ -77,4 +74,20 @@ h3 {
 
 p {
     color: var(--active-btn-color);
+    font-size: 16px;
+    font-weight: 400;
+    overflow: hidden;
+    opacity: 0;
+    max-height: 0;
+    margin-top: 0px;
+    transition:
+        max-height 0.5s ease,
+        opacity 0.3s ease,
+        margin-top 0.3s ease;
+}
+
+.faq.active p {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 20px;
 }
